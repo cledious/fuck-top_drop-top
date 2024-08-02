@@ -192,7 +192,8 @@ body {
         justify-content: center;
         margin: 4rem 0;
         section{
-            width: 25rem;
+            width: 90%;
+            min-width: 1.5em;
             height: 35rem;
             padding: 10px;
             background-color: whitesmoke;
@@ -213,11 +214,12 @@ body {
                 position: relative;
                 top: 15.5rem;
                 width: 100%;
+                min-width: 1.5em;
                 height: 50%;
                 #more {
                     color: white;
-                    width: 20px;
-                    height: 20px;
+                    width: 90%;
+                    height: 100%;
                     font-size: 2rem;
                     margin: auto auto;
                     transition: all 400ms ease-in-out;
@@ -309,6 +311,7 @@ body {
                 width: 40%;
                 img {
                     width: 50%;
+                    height: 70%
                 }
             }
         }
@@ -342,7 +345,15 @@ body {
         }
     }
 }
-
+@media screen  and (max-width: 240px) {
+    #furro {
+        right: -200px;
+    }
+    #main01 {
+        width: 90%;
+        min-width: 1.4em;
+    }
+}
 
 
 
