@@ -260,6 +260,9 @@ body #mecorecollabs article .mcc {
     width: 20px;
     height: 20px;
   }
+  body #furro :hover {
+    width: 45%;
+  }
   body header nav {
     top: 40px;
     right: 40px;
