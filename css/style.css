@@ -230,7 +230,7 @@ body #mecorecollabs article .mcc {
   background-color: #ac0202;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   body {
     background-color: black;
     background: linear-gradient(0deg, rgb(0, 0, 0) 70%, rgb(15, 15, 15) 86%, rgb(42, 42, 42) 93%, rgb(65, 65, 65) 96%, rgb(100, 100, 100) 99%, rgb(126, 126, 126) 100%);
@@ -240,20 +240,29 @@ body #mecorecollabs article .mcc {
     top: 40px;
     right: 40px;
     position: absolute;
-    border-radius: 100%;
+    border-radius: 100px;
     width: 50px;
     height: 50px;
     content-visibility: hidden;
     background-color: #ac0202;
-    transition: all 300ms ease-in-out;
+  }
+  body header nav a {
+    opacity: 0;
+    display: block;
+    position: relative;
+    right: 150px;
   }
   body header nav:hover {
-    width: auto;
-    height: auto;
+    background-color: #ac0202;
     border-radius: 30px;
-    padding: 10px;
+    width: 300px;
+    height: 50px;
     content-visibility: visible;
-    transition: all 300ms;
-    transition-timing-function: ease;
+  }
+  body header nav:hover a {
+    opacity: 1;
+    display: block;
+    transition: all 600ms ease-in-out;
+    right: 0px;
   }
 }/*# sourceMappingURL=style.css.map */
