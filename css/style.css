@@ -41,7 +41,7 @@ body #furro a {
 }
 body #furro:hover {
   z-index: 1;
-  width: 150px;
+  width: 20%;
   padding-left: 1rem;
   right: 0px;
   transition: all 600ms;
