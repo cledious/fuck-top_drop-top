@@ -6,8 +6,41 @@
 }
 
 body {
-  background-image: url(../img/light-gray-concrete-wall.jpg);
-  background: black 0.6;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(15, 15, 15) 70%, rgb(42, 42, 42) 87%, rgb(65, 65, 65) 91%, rgb(100, 100, 100) 97%, rgb(126, 126, 126) 100%);
+}
+body #furro {
+  transition: all 600ms ease-in-out;
+  text-transform: uppercase;
+  position: fixed;
+  top: 35%;
+  right: -130px;
+  width: auto;
+  height: auto;
+  background-color: #ac0202;
+  padding: 1rem;
+  padding-left: 4rem;
+  font-size: 2rem;
+  text-decoration: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+body #furro a {
+  color: whitesmoke;
+  font-weight: normal;
+}
+body #furro:hover {
+  padding-left: 1rem;
+  right: 0px;
+  transition: all 600ms;
+  animation: ease;
+}
+body #furro:hover a {
+  transform: scale(1);
+  transition: none;
 }
 body a:hover {
   transition: all 600ms ease-in;
@@ -19,6 +52,7 @@ body a:hover {
   font-weight: bolder;
 }
 body header {
+  position: fixed;
   display: flex;
   width: 100%;
   height: 4rem;
@@ -56,7 +90,7 @@ body header #menup::after {
   color: #ac0202;
   content: "_";
 }
-body #Udivider {
+body #divider {
   display: flex;
   margin: auto;
   width: 80%;
@@ -66,7 +100,7 @@ body #Udivider {
 body #main {
   display: flex;
   justify-content: center;
-  margin: 80px;
+  margin-top: 20rem;
 }
 body #main .ah {
   background-color: #b66363;
@@ -93,6 +127,7 @@ body #main #info h1::first-letter {
 }
 body #main #info img {
   height: 30rem;
+  scale: 2;
 }
 body #main #information {
   background-color: aqua;
@@ -122,13 +157,13 @@ body #navbutons a {
   justify-content: center;
   align-items: center;
 }
-body main {
+body #main01 {
   display: flex;
   gap: 50px;
   justify-content: center;
   margin: 4rem 0;
 }
-body main section {
+body #main01 section {
   width: 25rem;
   height: 35rem;
   padding: 10px;
@@ -136,24 +171,24 @@ body main section {
   background-color: black;
   opacity: 0.5;
 }
-body main section .theme {
+body #main01 section .theme {
   color: white;
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
-body main section .theme h2 {
+body #main01 section .theme h2 {
   text-transform: uppercase;
   font-family: k2d;
 }
-body main section .more {
+body #main01 section .more {
   display: flex;
   position: relative;
   top: 15.5rem;
   width: 100%;
   height: 50%;
 }
-body main section .more #more {
+body #main01 section .more #more {
   color: white;
   width: 20px;
   height: 20px;
@@ -161,14 +196,36 @@ body main section .more #more {
   margin: auto auto;
   transition: all 400ms ease-in-out;
 }
-body main section .more #more:hover {
+body #main01 section .more #more:hover {
   background-color: black;
   color: red;
   text-decoration: none;
   transition: all 400ms ease-in;
   font-weight: bolder;
 }
-body main section:hover {
+body #main01 section:hover {
   opacity: 1;
   transition: all 1s;
+}
+body #two {
+  width: 100%;
+  height: 15rem;
+  background-color: #ac0202;
+}
+body #mecorecollabs {
+  width: 100%;
+  height: 200rem;
+  background-color: rgb(28, 28, 28);
+}
+body #mecorecollabs article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body #mecorecollabs article .mcc {
+  width: 70rem;
+  height: 50rem;
+  margin: 8.5rem auto;
+  background-color: #ac0202;
 }/*# sourceMappingURL=style.css.map */
