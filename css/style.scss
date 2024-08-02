@@ -51,8 +51,8 @@ body {
         text-decoration: none;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
-        content-visibility: hidden;
         a {
+        display: none;
         color: whitesmoke;
         font-weight: normal;
         }
@@ -64,9 +64,9 @@ body {
         right: 0px;
         transition: all 600ms;
         animation: ease;
-        content-visibility: visible;
         a {
-            transform: scale(1);
+        display: block;
+        transform: scale(1);
             transition: none;
         }
     }
