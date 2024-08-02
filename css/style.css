@@ -23,7 +23,7 @@ body #furro {
   letter-spacing: 5px;
   position: fixed;
   top: 35%;
-  right: -290px;
+  right: 0px;
   width: 30rem;
   height: auto;
   background-color: #ac0202;
@@ -254,6 +254,10 @@ body #mecorecollabs article .mcc {
     background: linear-gradient(0deg, rgb(0, 0, 0) 70%, rgb(15, 15, 15) 86%, rgb(42, 42, 42) 93%, rgb(65, 65, 65) 96%, rgb(100, 100, 100) 99%, rgb(126, 126, 126) 100%);
     transition: all 1s ease-in;
   }
+  body #furro {
+    width: 20px;
+    height: 20px;
+  }
   body header nav {
     top: 40px;
     right: 40px;
@@ -322,9 +326,6 @@ body #mecorecollabs article .mcc {
   }
 }
 @media screen and (max-width: 240px) {
-  #furro {
-    display: none;
-  }
   #main01 {
     width: 90%;
     min-width: 1.4em;

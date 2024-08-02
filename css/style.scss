@@ -41,7 +41,7 @@ body {
         letter-spacing: 5px;
         position: fixed;
         top: 35%;
-        right: -290px;
+        right: 0px;
         width: 30rem;
         height: auto;
         background-color: $principal-color;
@@ -271,6 +271,10 @@ body {
 
 @media screen and (max-width: 780px){
     body {
+        #furro {
+            width: 20px;
+            height: 20px;
+        }
         background-color: black;
         background: linear-gradient(0deg,rgb(0, 0, 0,1) 70%, rgba(15,15,15,1) 86%, rgba(42,42,42,1) 93%, rgba(65,65,65,1) 96%, rgba(100,100,100,1) 99%, rgba(126,126,126,1) 100%);
         transition: all 1s ease-in;
@@ -346,15 +350,11 @@ body {
     }
 }
 @media screen  and (max-width: 240px) {
-    #furro {
-        display: none;
-    }
     #main01 {
         width: 90%;
         min-width: 1.4em;
     }
 }
-
 
 
 
