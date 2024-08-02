@@ -323,7 +323,7 @@ body #mecorecollabs article .mcc {
 }
 @media screen and (max-width: 240px) {
   #furro {
-    right: -200px;
+    display: none;
   }
   #main01 {
     width: 90%;
