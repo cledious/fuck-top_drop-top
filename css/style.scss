@@ -1,6 +1,10 @@
 $principal-color:#ac0202;
 $second-color: rgba(126,126,126,1);
-
+$special-font: deathnote;
+@font-face {
+    font-family: deathnote;
+    src: url(../deathnote_font/DEATHNOTE_Font/DEATHNOTEFont.ttf);
+}
 
 *{
     margin: 0;
@@ -20,6 +24,10 @@ $second-color: rgba(126,126,126,1);
     display: flex;
     flex-direction: column;
 }
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
+}
 //
 body {
     @include flexcol;
@@ -29,10 +37,12 @@ body {
     #furro {
         transition: all 600ms ease-in-out;
         text-transform: uppercase;
+        font-family: $special-font;
+        letter-spacing: 5px;
         position: fixed;
         top: 35%;
-        right: -130px;
-        width: auto;
+        right: -290px;
+        width: 30rem;
         height: auto;
         background-color: $principal-color;
         padding: 1rem;
@@ -47,6 +57,8 @@ body {
         }
     }
     #furro:hover {
+        z-index: 1;
+        width: 150px;
         padding-left: 1rem;
         right: 0px;
         transition: all 600ms;
@@ -224,9 +236,17 @@ body {
         }
     }
     #two {
+        display: flex;
         width: 100%;
         height: 15rem;
         background-color: #ac0202;
+        align-items: center;
+        justify-content: center;
+        font-size: 6rem;
+        p {
+            font-family: $special-font;
+            font-weight: bolder;
+        }
     }
     #mecorecollabs {
         width: 100%;
@@ -247,11 +267,10 @@ body {
     }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 780px){
     body {
         background-color: black;
         background: linear-gradient(0deg,rgb(0, 0, 0,1) 70%, rgba(15,15,15,1) 86%, rgba(42,42,42,1) 93%, rgba(65,65,65,1) 96%, rgba(100,100,100,1) 99%, rgba(126,126,126,1) 100%);
-        
         transition: all 1s ease-in;
         header {
             nav {
@@ -261,11 +280,10 @@ body {
                 border-radius: 100px;
                 width: 50px;
                 height: 50px;
-                content-visibility: hidden;
                 background-color: $principal-color;
                 a{
                     opacity: 0;
-                    display: block;
+                    display: none;
                     position: relative;
                     right: 150px;
                 }
@@ -275,14 +293,52 @@ body {
                 border-radius: 30px;
                 width: 300px;
                 height: 50px;
-                content-visibility: visible;
                 a{
                     opacity: 1;
-                    display: block;
+                    display: flex;
                     transition: all 600ms ease-in-out;    
                     right: 0px; 
                 }
             }
+            #menup {
+                display: none;
+            }
+        }
+        #main {
+            #info{
+                width: 40%;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+        #main01 {
+            @include flexcol;
+            justify-content: center;
+            align-items: center;
+            section {
+                background-color: $second-color;
+            }
+        }
+        #mecorecollabs {
+        width: 100%;
+        height: 200rem;
+        background-color: rgb(28, 28, 28);
+        article {
+            @include flexcol;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            .mcc {
+                width: 70%;
+                min-width: 3.5em;
+                margin: 10rem;
+                height: 30rem;
+                margin: 8.5rem auto;
+                background-color: $principal-color;
+            }
+
+        }
         }
     }
 }
