@@ -33,6 +33,7 @@ body #furro {
   text-decoration: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  content-visibility: hidden;
 }
 body #furro a {
   color: whitesmoke;
@@ -45,6 +46,7 @@ body #furro:hover {
   right: 0px;
   transition: all 600ms;
   animation: ease;
+  content-visibility: visible;
 }
 body #furro:hover a {
   transform: scale(1);
