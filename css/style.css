@@ -228,4 +228,32 @@ body #mecorecollabs article .mcc {
   height: 50rem;
   margin: 8.5rem auto;
   background-color: #ac0202;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: black;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 70%, rgb(15, 15, 15) 86%, rgb(42, 42, 42) 93%, rgb(65, 65, 65) 96%, rgb(100, 100, 100) 99%, rgb(126, 126, 126) 100%);
+    transition: all 1s ease-in;
+  }
+  body header nav {
+    top: 40px;
+    right: 40px;
+    position: absolute;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    content-visibility: hidden;
+    background-color: #ac0202;
+    transition: all 300ms ease-in-out;
+  }
+  body header nav:hover {
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+    padding: 10px;
+    content-visibility: visible;
+    transition: all 300ms;
+    transition-timing-function: ease;
+  }
 }/*# sourceMappingURL=style.css.map */
