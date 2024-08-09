@@ -139,7 +139,8 @@ body #main {
 }
 body #main .ah {
   background-color: #b66363;
-  width: 100rem;
+  width: 90%;
+  min-width: none;
   height: 100rem;
 }
 body #main #collabs {
@@ -278,5 +279,10 @@ body #mecorecollabs article .mcc {
 @media screen and (max-width: 480px) {
   body {
     background: rgb(49, 129, 42);
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-color: yellow;
   }
 }/*# sourceMappingURL=style.css.map */

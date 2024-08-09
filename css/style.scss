@@ -160,7 +160,8 @@ body {
         margin-top: 20rem;
         .ah {
             background-color: #b66363;
-            width: 100rem;
+            width: 90%;
+            min-width: none;
             height: 100rem;
         }
         #collabs {
@@ -300,10 +301,14 @@ body {
 @media screen and (max-width: 480px){
     body {
         background: rgb(49, 129, 42);
+
     }
 }
 //Tablet
-@media only screen and (min-width: 768px){
+@media screen and (max-width: 768px){
+    body {
+        background-color: yellow;
+    }
 }
 //Desktop
 @media only screen and (min-width: 992px){
