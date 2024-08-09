@@ -297,12 +297,13 @@ body {
 }
 
 //mobile
-@media only screen and (min-width: 480px){
-
+@media screen and (max-width: 480px){
+    body {
+        background: rgb(49, 129, 42);
+    }
 }
 //Tablet
 @media only screen and (min-width: 768px){
-
 }
 //Desktop
 @media only screen and (min-width: 992px){

@@ -273,4 +273,10 @@ body #mecorecollabs article .mcc {
   height: 50rem;
   margin: 8.5rem auto;
   background-color: #ac0202;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background: rgb(49, 129, 42);
+  }
 }/*# sourceMappingURL=style.css.map */
