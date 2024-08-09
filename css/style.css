@@ -162,8 +162,9 @@ body #main #info h1::first-letter {
   color: rgb(155, 120, 120);
 }
 body #main #info img {
+  width: 80%;
   height: 30rem;
-  scale: 2;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(1%) saturate(2095%) hue-rotate(28deg) brightness(108%) contrast(84%);
 }
 body #main #information {
   background-color: aqua;
