@@ -17,49 +17,74 @@ body {
   background: linear-gradient(0deg, rgb(15, 15, 15) 70%, rgb(42, 42, 42) 87%, rgb(65, 65, 65) 91%, rgb(100, 100, 100) 97%, rgb(126, 126, 126) 100%);
 }
 body #furro {
+  z-index: 1;
   transition: all 600ms ease-in-out;
   text-transform: uppercase;
-  font-family: deathnote;
   letter-spacing: 5px;
   position: fixed;
   top: 35%;
-  right: 0px;
-  width: 30rem;
+  left: 0px;
+  width: auto;
   height: auto;
   background-color: #ac0202;
   padding: 1rem;
   padding-left: 4rem;
   font-size: 2rem;
   text-decoration: none;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-body #furro a {
-  display: none;
+body #furro p::first-letter {
+  font-family: deathnote;
+  font-weight: bolder;
+}
+body #furro div:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+body #furro div:nth-of-type(1) p {
+  color: black;
+}
+body #furro div:nth-of-type(1) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  border: whitesmoke solid 1px;
+}
+body #furro div:nth-of-type(1) a p {
+  width: auto;
+  height: auto;
   color: whitesmoke;
-  font-weight: normal;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
 }
 body #furro:hover {
   z-index: 1;
   width: 20%;
+  height: 40rem;
   padding-left: 1rem;
   right: 0px;
   transition: all 600ms;
   animation: ease;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  align-items: center;
 }
-body #furro:hover a {
-  display: block;
-  transform: scale(1);
-  transition: none;
+body #furro:hover div:nth-of-type(2) {
+  width: 90%;
+  height: 50%;
+  background-color: whitesmoke;
 }
-body a:hover {
-  transition: all 600ms ease-in;
-  text-decoration: underline;
-  text-decoration-color: #ac0202;
-  transform: scale(1.2);
-  opacity: 0.7;
-  color: rgb(51, 47, 47);
-  font-weight: bolder;
+body #furro:hover div:nth-of-type(3) {
+  width: 90%;
+  height: 30%;
+  background-color: whitesmoke;
 }
 body header {
   position: fixed;
@@ -248,91 +273,4 @@ body #mecorecollabs article .mcc {
   height: 50rem;
   margin: 8.5rem auto;
   background-color: #ac0202;
-}
-
-@media screen and (max-width: 780px) {
-  body {
-    background-color: black;
-    background: linear-gradient(0deg, rgb(0, 0, 0) 70%, rgb(15, 15, 15) 86%, rgb(42, 42, 42) 93%, rgb(65, 65, 65) 96%, rgb(100, 100, 100) 99%, rgb(126, 126, 126) 100%);
-    transition: all 1s ease-in;
-  }
-  body #furro {
-    width: 20px;
-    height: 20px;
-  }
-  body #furro :hover {
-    width: 45%;
-  }
-  body header nav {
-    top: 40px;
-    right: 40px;
-    position: absolute;
-    border-radius: 100px;
-    width: 50px;
-    height: 50px;
-    background-color: #ac0202;
-  }
-  body header nav a {
-    opacity: 0;
-    display: none;
-    position: relative;
-    right: 150px;
-  }
-  body header nav:hover {
-    background-color: #ac0202;
-    border-radius: 30px;
-    width: 300px;
-    height: 50px;
-  }
-  body header nav:hover a {
-    opacity: 1;
-    display: flex;
-    transition: all 600ms ease-in-out;
-    right: 0px;
-  }
-  body header #menup {
-    display: none;
-  }
-  body #main #info {
-    width: 40%;
-  }
-  body #main #info img {
-    width: 50%;
-    height: 70%;
-  }
-  body #main01 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  body #main01 section {
-    background-color: rgb(126, 126, 126);
-  }
-  body #mecorecollabs {
-    width: 100%;
-    height: 200rem;
-    background-color: rgb(28, 28, 28);
-  }
-  body #mecorecollabs article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  body #mecorecollabs article .mcc {
-    width: 70%;
-    min-width: 3.5em;
-    margin: 10rem;
-    height: 30rem;
-    margin: 8.5rem auto;
-    background-color: #ac0202;
-  }
-}
-@media screen and (max-width: 240px) {
-  #main01 {
-    width: 90%;
-    min-width: 1.4em;
-  }
 }/*# sourceMappingURL=style.css.map */
