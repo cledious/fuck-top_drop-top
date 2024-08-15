@@ -12,8 +12,8 @@
 body {
   display: flex;
   flex-direction: column;
-  gap: 20rem;
-  background: rgb(0, 0, 0);
+  gap: 10rem;
+  background: rgb(222, 167, 167);
   background: linear-gradient(0deg, rgb(15, 15, 15) 70%, rgb(42, 42, 42) 87%, rgb(65, 65, 65) 91%, rgb(100, 100, 100) 97%, rgb(126, 126, 126) 100%);
 }
 body #furro {
@@ -128,31 +128,24 @@ body header #menup::after {
   color: #ac0202;
   content: "_";
 }
-body #divider {
+body #introducing {
   display: flex;
-  margin: auto;
-  width: 80%;
-  height: 0.1rem;
-  background-color: black;
-}
-body #main {
-  display: flex;
+  margin-top: 10rem;
   justify-content: center;
-  margin-top: 20rem;
 }
-body #main .ah {
+body #introducing .ah {
   background-color: #b66363;
   width: 90%;
   min-width: none;
   height: 100rem;
 }
-body #main #collabs {
+body #introducing #collabs {
   background-color: aqua;
   display: none;
   justify-content: center;
   align-items: center;
 }
-body #main #info {
+body #introducing #info {
   width: 50%;
   height: 50rem;
   display: flex;
@@ -160,54 +153,33 @@ body #main #info {
   align-items: center;
   background-color: rgba(100, 100, 100, 0.1);
 }
-body #main #info h1 {
+body #introducing #info h1 {
   font-family: k2d;
 }
-body #main #info h1::first-letter {
+body #introducing #info h1::first-letter {
   text-transform: capitalize;
   color: rgb(155, 120, 120);
 }
-body #main #info img {
+body #introducing #info img {
   width: 100%;
   height: 100%;
   filter: brightness(0) saturate(100%) invert(40%) sepia(1%) saturate(2095%) hue-rotate(28deg) brightness(108%) contrast(84%);
 }
-body #main #information {
+body #introducing #information {
   background-color: aqua;
   display: none;
   justify-content: center;
   align-items: center;
   margin: 10rem 0;
 }
-body #navbutons {
-  top: 40.7rem;
-  position: absolute;
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-}
-body #navbutons a {
-  font-family: k2d;
-  text-transform: uppercase;
-  color: white;
-  text-decoration: none;
-  margin: 5px;
-  padding: 2rem;
-  border-radius: 10%;
-  background-color: #ac0202;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body #main01 {
+body main {
   display: flex;
   height: auto;
   gap: 50px;
   justify-content: center;
   margin: 4rem 0;
 }
-body #main01 section {
+body main .cards {
   width: 80%;
   min-width: 1.5em;
   height: 35rem;
@@ -216,17 +188,17 @@ body #main01 section {
   background-color: black;
   opacity: 0.4;
 }
-body #main01 section .theme {
+body main .cards .theme {
   color: white;
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
-body #main01 section .theme h2 {
+body main .cards .theme h2 {
   text-transform: uppercase;
   font-family: k2d;
 }
-body #main01 section .more {
+body main .cards .more {
   display: flex;
   position: relative;
   top: 15.5rem;
@@ -234,7 +206,7 @@ body #main01 section .more {
   min-width: 1.5em;
   height: 50%;
 }
-body #main01 section .more #more {
+body main .cards .more #more {
   color: white;
   width: 90%;
   height: 100%;
@@ -242,18 +214,18 @@ body #main01 section .more #more {
   margin: auto auto;
   transition: all 400ms ease-in-out;
 }
-body #main01 section .more #more:hover {
+body main .cards .more #more:hover {
   background-color: black;
   color: red;
   text-decoration: none;
   transition: all 400ms ease-in;
   font-weight: bolder;
 }
-body #main01 section:hover {
+body main section:hover {
   opacity: 1;
   transition: all 1s;
 }
-body #two {
+body .comingsoon {
   display: flex;
   width: 100%;
   height: 15rem;
@@ -262,26 +234,114 @@ body #two {
   justify-content: center;
   font-size: 6rem;
 }
-body #two p {
+body .comingsoon p {
   font-family: deathnote;
   font-weight: bolder;
 }
-body #mecorecollabs {
-  width: 100%;
-  height: 200rem;
-  background-color: rgb(28, 28, 28);
+body .muits {
+  height: 50rem;
+  margin-top: 10rem;
+  padding: 0 10%;
 }
-body #mecorecollabs article {
+body .muits article {
+  width: 50%;
+}
+body .muits article:nth-of-type(1) {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
-body #mecorecollabs article .mcc {
-  width: 70rem;
-  height: 50rem;
-  margin: 8.5rem auto;
-  background-color: #ac0202;
+body .muits article:nth-of-type(1) div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+  gap: 30px;
+}
+body .muits article:nth-of-type(1) div h1 {
+  font-size: 4em;
+  font-family: k2d;
+  text-indent: 20px;
+  color: whitesmoke;
+}
+body .muits article:nth-of-type(1) div h1 span {
+  color: #ac0202;
+}
+body .muits article:nth-of-type(1) div p {
+  width: 100%;
+  font-size: 2em;
+  font-weight: lighter;
+  color: rgba(172, 2, 2, 0.5);
+}
+body .muits article:nth-of-type(1) a {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+  justify-content: end;
+  align-items: end;
+}
+body .muits article:nth-of-type(1) a p {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 10px;
+  background-color: #000000;
+  color: whitesmoke;
+  font-size: 2em;
+}
+body .muits article:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+body .muits article:nth-of-type(2) .mards {
+  background-color: #000000;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+body .muits article:nth-of-type(2) .mards div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  float: inline-end;
+  justify-content: space-between;
+  color: whitesmoke;
+  border: rgba(245, 245, 245, 0.5) solid 1px;
+  transition: all 600ms ease-in-out;
+}
+body .muits article:nth-of-type(2) .mards div p, body .muits article:nth-of-type(2) .mards div a {
+  margin-top: 12px;
+}
+body .muits article:nth-of-type(2) .mards div p {
+  margin-left: 12px;
+}
+body .muits article:nth-of-type(2) .mards div a {
+  margin-right: 12px;
+}
+body .muits article:nth-of-type(2) .mards div:hover {
+  height: 100px;
+  transition: all 600ms ease-in-out;
+  border: #ac0202 solid 1px;
+}
+body .muits article:nth-of-type(2) .mard1 {
+  grid-area: 1/1/3/2;
+}
+body .muits article:nth-of-type(2) .mard2 {
+  grid-area: 1/2/2/3;
+}
+body .muits article:nth-of-type(2) .mard3 {
+  grid-area: 2/2/3/3;
 }
 
 @media screen and (max-width: 480px) {

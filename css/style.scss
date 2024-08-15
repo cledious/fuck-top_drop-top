@@ -31,9 +31,10 @@ $special-font: deathnote;
 //
 body {
     @include flexcol;
-    gap: 20rem;
-    background: rgb(0,0,0);
+    gap: 10rem;
+    background: rgb(222, 167, 167);
     background: linear-gradient(0deg, rgba(15,15,15,1) 70%, rgba(42,42,42,1) 87%, rgba(65,65,65,1) 91%, rgba(100,100,100,1) 97%, rgba(126,126,126,1) 100%);
+    //homepage
     #furro {
         z-index: 1;
         transition: all 600ms ease-in-out;
@@ -150,17 +151,10 @@ body {
             content: "_";
         }
     }
-    #divider {
-        display: flex;
-        margin: auto;
-        width: 80%;
-        height: 0.1rem;
-        background-color: black;
-    }
-    #main {
+    #introducing {
         display: flex ;
+        margin-top: 10rem;
         justify-content: center;
-        margin-top: 20rem;
         .ah {
             background-color: #b66363;
             width: 90%;
@@ -200,34 +194,13 @@ body {
             align-items: center;
             margin: 10rem 0;}
     }
-    #navbutons {
-        top: 40.7rem;
-        position: absolute;
-        width: 100%;
-        height: 5rem;
-        display: flex;
-        justify-content: center;
-        a {
-            font-family: k2d;
-            text-transform: uppercase;
-            color: white;
-            text-decoration: none;
-            margin: 5px;
-            padding: 2rem;
-            border-radius: 10%;
-            background-color: $principal-color;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-    #main01{
+    main{
         display: flex;
         height: auto;
         gap: 50px;
         justify-content: center;
         margin: 4rem 0;
-        section{
+        .cards{
             width: 80%;
             min-width: 1.5em;
             height: 35rem;
@@ -273,7 +246,7 @@ body {
             transition: all 1s;
         }
     }
-    #two {
+    .comingsoon {
         display: flex;
         width: 100%;
         height: 15rem;
@@ -286,21 +259,97 @@ body {
             font-weight: bolder;
         }
     }
-    #mecorecollabs {
-        width: 100%;
-        height: 200rem;
-        background-color: rgb(28, 28, 28);
+    //homepage cluits
+    .muits {
+        height: 50rem;
+        margin-top: 10rem;
+        padding: 0 10%;
         article {
+            width: 50%;
+        }
+        article:nth-of-type(1) {
             @include flexcol;
-            align-items: center;
             justify-content: space-between;
-            .mcc {
-                width: 70rem;
-                height: 50rem;
-                margin: 8.5rem auto;
-                background-color: $principal-color;
+            height: 100%;
+            div {
+                @include flexcol;
+                width: 100%;
+                height: 90%;
+                gap: 30px;
+                h1 {
+                    font-size: 4em;
+                    font-family: k2d;
+                    text-indent: 20px;
+                    color: whitesmoke;
+                    span {
+                        color: #ac0202;
+                    }
+                }
+                p {
+                    width: 100%;
+                    font-size: 2em;
+                    font-weight: lighter;
+                    color: rgba($color: $principal-color, $alpha: 0.5);
+                }
             }
-
+            a {
+                @include flexrow;
+                width: 100%;
+                height: 10%;
+                justify-content: end;
+                align-items: end;
+                p {
+                    width: max-content;
+                    height: max-content;
+                    padding: 10px;
+                    background-color: #000000;
+                    color: whitesmoke;
+                    font-size: 2em;
+                }
+            }
+        }
+        article:nth-of-type(2) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px; 
+            .mards {
+                background-color: #000000;
+                opacity: 1;
+                width: auto;
+                height: auto;
+                @include flexcol;
+                justify-content: end;
+                div {
+                    @include flexrow;
+                    width: 100%;
+                    height: 40px;
+                    position: relative;
+                    float: inline-end;
+                    justify-content: space-between;
+                    color: whitesmoke;
+                    border: rgba($color: whitesmoke, $alpha: 0.5) solid 1px;
+                    transition: all 600ms ease-in-out;
+                    p, a {
+                        margin-top: 12px;
+                    }
+                    p {
+                        margin-left: 12px;
+                    }
+                    a {
+                        margin-right: 12px;
+                    }
+                }
+                div:hover {
+                    height: 100px;
+                    transition: all 600ms ease-in-out;
+                    border: rgba($color: $principal-color, $alpha: 1) solid 1px;
+                }
+            }
+            .mard1 { grid-area: 1 / 1 / 3 / 2; }
+            .mard2 { grid-area: 1 / 2 / 2 / 3; }
+            .mard3 { grid-area: 2 / 2 / 3 / 3; }
         }
     }
 }
