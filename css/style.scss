@@ -261,9 +261,9 @@ body {
     }
     //homepage cluits
     .muits {
-        height: 50rem;
-        margin-top: 10rem;
+        height: 30rem;
         padding: 0 10%;
+        margin-top: 8rem;
         article {
             width: 50%;
         }
@@ -277,7 +277,7 @@ body {
                 height: 90%;
                 gap: 30px;
                 h1 {
-                    font-size: 4em;
+                    font-size: 3em;
                     font-family: k2d;
                     text-indent: 20px;
                     color: whitesmoke;
@@ -287,7 +287,7 @@ body {
                 }
                 p {
                     width: 100%;
-                    font-size: 2em;
+                    font-size: 1em;
                     font-weight: lighter;
                     color: rgba($color: $principal-color, $alpha: 0.5);
                 }
