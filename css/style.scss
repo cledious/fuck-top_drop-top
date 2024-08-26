@@ -266,7 +266,7 @@ body {
     }
     //homepage cluits
     .muits {
-        height: 40rem;
+        height: 30rem;
         padding: 0 10%;
         margin: auto;
         article {
@@ -418,9 +418,69 @@ body {
     }
 }
 //Tablet
-@media screen and (min-width: 481px) and (max-width: 768px){
-    body {
-        background-color: yellow;
+@media screen and (min-width: 481px) and (max-width: 1000px){
+    article:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: (1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+        .mards {
+            background-image: url(../img/logos/logo.svg);
+            background-size: cover;
+            width: auto;
+            height: auto;
+            @include flexcol;
+            justify-content: end;
+            div {
+                @include flexrow;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                height: 5rem;
+                position: relative;
+                float: inline-end;
+                justify-content: space-between;
+                color: whitesmoke;
+                border: rgba($color: whitesmoke, $alpha: 0.5) solid 1px;
+                transition: all 600ms ease-in-out;
+                .cards-min-info {
+                    display: none;
+                    width: 100%;
+                    margin: 0 12px;
+                }
+                .itemname, .seemore{
+                    margin-top: 12px;
+                    width: 44%;
+                    height: 3rem;
+                }
+                .itemname {
+                    margin-left: 12px;
+                    span {
+                        color: beige;
+                        opacity: 0.5;
+                    }
+                }
+                .seemore {
+                    margin-right: 12px;
+                    text-align: end;
+                }
+            }
+            div:hover {
+                max-height: auto;
+                height: 20rem;
+                transition: all 700ms ease-in-out;
+                border: rgba($color: $principal-color, $alpha: 1) solid 1px;
+                .cards-min-info {
+                    display: block;
+                    opacity: 1;
+                    transition: all 1s;
+                }
+            }
+        }
+        .mard1 { grid-area: 1 / 1 / 2 / 2; }
+        .mard2 { grid-area: 2 / 1 / 3 / 2; }
+        .mard3 { grid-area: 3 / 1 / 4 / 2; }
     }
 }
 //Desktop
