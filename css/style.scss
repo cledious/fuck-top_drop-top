@@ -388,6 +388,60 @@ body {
         }
     }
 }
+#cv {
+    background: whitesmoke;
+    width: 100vw;
+    height: 141.45vw;
+    @include flexrow;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0;
+    header {
+        background: #b66363;
+        width: 100%;
+        height: 12rem;
+        position: static;
+        #logo {
+            background-color: whitesmoke;
+            width: 60%;
+            height: auto;
+            align-items: flex-start;
+            font-size: 1.3em;
+            @include flexcol;
+            span {
+                font-size: 0.5em;
+                letter-spacing: 2px;
+                opacity: 0.6;
+            }
+        }
+        nav {
+            background: whitesmoke;
+            @include flexcol;
+            align-items: end;
+            gap: 5px;
+            height: auto;
+            font-size: 0.5em;
+        }
+    }
+    .maincv {
+        background-color: white;
+        width: 60%;
+        height: 100vh;
+        @include flexcol;
+        justify-content: flex-start;
+        section {
+            background-color: whitesmoke;
+        }
+    }
+    aside {
+        background-color: white;
+        width: 40%;
+        height: auto;
+        article {
+            background-color: whitesmoke
+        }
+    }
+}
 .logo {
     @include flexrow;
     @include hwauto;

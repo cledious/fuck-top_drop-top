@@ -373,6 +373,65 @@ body .muits .outlinks:hover {
   color: whitesmoke;
 }
 
+#cv {
+  background: whitesmoke;
+  width: 100vw;
+  height: 141.45vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0;
+}
+#cv header {
+  background: #b66363;
+  width: 100%;
+  height: 12rem;
+  position: static;
+}
+#cv header #logo {
+  background-color: whitesmoke;
+  width: 60%;
+  height: auto;
+  align-items: flex-start;
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+}
+#cv header #logo span {
+  font-size: 0.5em;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+#cv header nav {
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
+  height: auto;
+  font-size: 0.5em;
+}
+#cv .maincv {
+  background-color: white;
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#cv .maincv section {
+  background-color: whitesmoke;
+}
+#cv aside {
+  background-color: white;
+  width: 40%;
+  height: auto;
+}
+#cv aside article {
+  background-color: whitesmoke;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
