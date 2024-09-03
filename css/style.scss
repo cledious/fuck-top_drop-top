@@ -5,546 +5,111 @@ $special-font: deathnote;
     font-family: deathnote;
     src: url(../deathnote_font/DEATHNOTE_Font/DEATHNOTEFont.ttf);
 }
-
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    text-decoration: none;
-}
-//universal divide 4 rem
-@mixin Upadding {
-    padding: 0 10%;
-}
-@mixin clear-background {
-    filter: brightness(1.1);
-    mix-blend-mode: multiply;
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
 }
 @mixin flexcol {
     display: flex;
     flex-direction: column;
 }
-@mixin flexrow {
-    display: flex;
-    flex-direction: row;
+@mixin u-paddings {
+    padding: 0 10%;
 }
-@mixin hwauto {
-    width: 2rem;
-    height: 2rem;
+@mixin filter {
+ filter: brightness(0) saturate(100%) invert(40%) sepia(1%) saturate(2095%) hue-rotate(28deg) brightness(108%) contrast(84%);
 }
-//
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    color: black;
+}
+a::after{
+    content:'';
+    width: 100px;
+    height: 20px;
+    color: aliceblue;
+}
 body {
-    @include flexcol;
-    height: 100vh;
-    gap: 10rem;
-    background: rgb(222, 167, 167);
-    background: linear-gradient(0deg, rgba(15,15,15,1) 70%, rgba(42,42,42,1) 87%, rgba(65,65,65,1) 91%, rgba(100,100,100,1) 97%, rgba(126,126,126,1) 100%);
-    //homepage
-    #furro {
-        z-index: 1;
-        transition: all 600ms ease-in-out;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        position: fixed;
-        top: 35%;
-        left: 0px;
-        width: auto;
-        height: auto;
-        background-color: $principal-color;
-        padding: 1rem;
-        padding-left: 4rem;
-        font-size: 2rem;
-        text-decoration: none;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        p::first-letter{
-            font-family: $special-font;
-            font-weight: bolder;
-        }
-        div:nth-of-type(1) {
-            @include flexrow;
-            justify-content: space-between;
-            width: 100%;
-            p {
-                color: black;
-            }
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 2rem;
-                height: 2rem;
-                border-radius: 100%;
-                border: whitesmoke solid 1px;
-                p{
-                    width: auto;
-                    height: auto;
-                    color: whitesmoke; 
-                    font-size: 1rem;
-                    font-family: 'Courier New', Courier, monospace;
-                }
-            }
-        }
-    }
-    #furro:hover {
-        background-color: rgba($principal-color,0.1);
-        z-index: 1;
-        width: 30rem;
-        height: 40rem;
-        right: 0px;
-        transition: all 1s;
-        animation: ease-in;
-        @include flexcol;
+    header{
+        background-color: whitesmoke;
+        color: black;
+        //
+        width: 100vw;
+        height: 10vh;
+        //
+        @include flexrow;
         justify-content: space-between;
         align-items: center;
-        div:nth-of-type(1) {
-            p{
-                color: whitesmoke;
-            }
-        }
-        div:nth-of-type(2){
-            width: 90%;
-            height: 70%;
-            background-color: whitesmoke;
-            div {
-                width: 90%;
-                height: 60%;
-                background-color: rgb(105, 72, 72);
-            }
-        }
-    }
-    header{
-        position: fixed;
-        display: flex;
-        width: 100%;
-        height: 4rem;
-        //
         text-transform: uppercase;
-        //
-        font-size: 1.5em;
-        font-family: k2d;
-        //
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        //
-        #logo {
-            color: black;
-            letter-spacing: 10px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: max-content;
-            height: 4rem;
-            gap: 40px;
-            a{
-                color: black;
-                opacity: 1;
-
+        gap: 0px;
+        #logo{
+            font-size: 2.5em; 
+            span{
+                img{
+                    width: min;
+                    height: 0.75em;
+                }
             }
-        }
-        a {
-            color: black;
-        }
-        #menup::after {
-            width: 1rem;
-            height: 3rem;
-            background-color: $principal-color;
+        }#logo::after{
             color: $principal-color;
-            content: "_";
+            content: 'studio';
+            width: 12px;
+            height: 12px;
+            font-size: 0.6em;
+            font-weight: lighter;
+            margin-left: 0.3em;
         }
-    }
-    #introducing {
-        display: flex ;
-        margin-top: 10rem;
-        justify-content: center;
-        .ah {
-            background-color: #b66363;
-            width: 90%;
-            min-width: none;
-            height: 100rem;
+        nav{
+            @include flexrow;
+            gap: 10px;
         }
-        #collabs {
-            background-color: aqua;
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-        #info {
-            width: 50%;
-            height: 50rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(100,100,100,0.1);;
-            h1 {
-                font-family: k2d;
-            }
-            h1::first-letter {
-                text-transform: capitalize;
-                color: rgb(155, 120, 120);
-            }
-            img {
-                width: 100%;
-                height: 100%;
-                filter: brightness(0) saturate(100%) invert(40%) sepia(1%) saturate(2095%) hue-rotate(28deg) brightness(108%) contrast(84%);
-            }
-        }
-        #information {
-            background-color: aqua;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            margin: 10rem 0;}
     }
     main{
-        display: flex;
-        height: auto;
-        gap: 50px;
-        justify-content: center;
-        margin: 4rem 0;
-        .cards{
-            width: 80%;
-            min-width: 1.5em;
-            height: 35rem;
-            padding: 10px;
-            background-color: whitesmoke;
-            background-color: black;
-            opacity: 0.4;
-            .theme {
-                color: white;
-                h2 {
-                    text-transform: uppercase;
-                    font-family: k2d;
-                }
-                display: flex;
-                flex-direction: row;
-                align-items: baseline;
-            }
-            .more{
-                display: flex;
-                position: relative;
-                top: 15.5rem;
-                width: 100%;
-                min-width: 1.5em;
-                height: 50%;
-                #more {
-                    color: white;
-                    width: 90%;
-                    height: 100%;
-                    font-size: 2rem;
-                    margin: auto auto;
-                    transition: all 400ms ease-in-out;
-                }#more:hover{
-                    background-color: black;
-                    color: red;
-                    text-decoration: none;
-                    transition: all 400ms ease-in;
-                    font-weight: bolder;
-                }
-            }
-        }
-        section:hover {
-            opacity: 1;
-            transition: all 1s;
-        }
-    }
-    .comingsoon {
-        display: flex;
+        @include flexrow;
+        background-color: white;
         width: 100%;
-        height: 15rem;
-        background-color: #ac0202;
-        align-items: center;
-        justify-content: center;
-        font-size: 6rem;
-        p {
-            font-family: $special-font;
-            font-weight: bolder;
-        }
-    }
-    //homepage cluits
-    .muits {
-        height: 30rem;
-        padding: 0 10%;
-        margin: auto;
-        article {
-            width: 50%;
-        }
-        article:nth-of-type(1) {
-            @include flexcol;
-            justify-content: space-between;
-            height: 100%;
+        height: 80vh;
+
+        article{
+            @include flexrow;
+            background-color: #ac0202;
+            width: 60vw;
+            height: 60vh;
+            margin: auto;
+            img {
+                //@include filter;
+                width: 50%;
+                height: 100%;
+
+            }
+            //-------
             div {
-                @include flexcol;
-                width: 100%;
-                height: 90%;
-                gap: 30px;
-                h1 {
-                    font-size: 3em;
-                    font-family: k2d;
-                    text-indent: 20px;
-                    color: whitesmoke;
-                    span {
-                        color: #ac0202;
-                        img {
-                            height: 1em;
-                        }
-                    
-                    }
-                }
-                p {
-                    width: 100%;
-                    font-size: 1em;
-                    font-weight: lighter;
-                    color: rgba($color: $principal-color, $alpha: 0.5);
-                }
-            }
-            a {
-                @include flexrow;
-                width: 100%;
-                height: 10%;
-                justify-content: end;
-                align-items: end;
-                p {
-                    width: max-content;
-                    height: max-content;
-                    padding: 10px;
-                    background-color: #000000;
-                    font-size: 2em;
-                }
-            }
-        }
-        article:nth-of-type(2) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 10px;
-            grid-row-gap: 10px; 
-            .mards {
-                background-image: url(../img/logos/logo.svg);
-                background-size: cover;
-                width: auto;
-                height: auto;
-                @include flexcol;
-                justify-content: end;
-                div {
-                    @include flexrow;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    width: 100%;
-                    height: 5rem;
-                    position: relative;
-                    float: inline-end;
-                    justify-content: space-between;
-                    color: whitesmoke;
-                    border: rgba($color: whitesmoke, $alpha: 0.5) solid 1px;
-                    transition: all 600ms ease-in-out;
-                    .cards-min-info {
-                        display: none;
-                        width: 100%;
-                        margin: 0 12px;
-                    }
-                    .itemname, .seemore{
-                        margin-top: 12px;
-                        width: 44%;
-                        height: 3rem;
-                    }
-                    .itemname {
-                        margin-left: 12px;
-                        span {
-                            color: beige;
-                            opacity: 0.5;
-                        }
-                    }
-                    .seemore {
-                        margin-right: 12px;
-                        text-align: end;
-                    }
-                }
-                div:hover {
-                    max-height: auto;
-                    height: 20rem;
-                    transition: all 700ms ease-in-out;
-                    border: rgba($color: $principal-color, $alpha: 1) solid 1px;
-                    .cards-min-info {
-                        display: block;
-                        opacity: 1;
-                        transition: all 1s;
-                    }
-                }
-            }
-            .mard1 { grid-area: 1 / 1 / 3 / 2; }
-            .mard2 { grid-area: 1 / 2 / 2 / 3; }
-            .mard3 { grid-area: 2 / 2 / 3 / 3; }
-        }
-        //
-        .outlinks {
-            color: $principal-color;
-        }
-        .outlinks:hover {
-            color: whitesmoke;
-        }
-    }
-}
-#cv {
-    background: whitesmoke;
-    width: 100vw;
-    height: 141.45vw;
-    @include flexrow;
-    flex-wrap: wrap;
-    gap: 0;
-    margin: 0;
-    header {
-        background: #b66363;
-        width: 100%;
-        height: 12rem;
-        position: static;
-        #logo {
-            background-color: whitesmoke;
-            width: 60%;
-            height: auto;
-            align-items: flex-start;
-            font-size: 1.3em;
-            @include flexcol;
-            span {
-                font-size: 0.5em;
-                letter-spacing: 2px;
-                opacity: 0.6;
-            }
-        }
-        nav {
-            background: whitesmoke;
-            @include flexcol;
-            align-items: end;
-            gap: 5px;
-            height: auto;
-            font-size: 0.5em;
-        }
-    }
-    .maincv {
-        background-color: white;
-        width: 60%;
-        height: 100vh;
-        @include flexcol;
-        justify-content: flex-start;
-        section {
-            background-color: whitesmoke;
-        }
-    }
-    aside {
-        background-color: white;
-        width: 40%;
-        height: auto;
-        article {
-            background-color: whitesmoke
-        }
-    }
-}
-.logo {
-    @include flexrow;
-    @include hwauto;
-    gap: 10px;
-    img {
-        width: 100%;
-        height: 100%;
-    }
-}
-//mobile
-@media screen and (max-width: 480px){
-    body {
-        background-color: gray;
-        #main{
-            margin-top: 0;
-            #info {
-                width: 90%;
-                height: 50rem;
-            }
-        }
-        #main01 {
-            @include flexcol;
-            section {
+                font-size: 2em;
                 margin: auto;
-                border: $principal-color solid 1px;
-            }
-        }
-    }
-}
-//Tablet
-@media screen and (min-width: 481px) and (max-width: 1000px){
-    article:nth-of-type(2) {
-        display: grid;
-        grid-template-columns: (1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px; 
-        .mards {
-            background-image: url(../img/logos/logo.svg);
-            background-size: cover;
-            width: auto;
-            height: auto;
-            @include flexcol;
-            justify-content: end;
-            div {
-                @include flexrow;
-                flex-wrap: wrap;
-                align-items: center;
-                width: 100%;
-                height: 5rem;
-                position: relative;
-                float: inline-end;
-                justify-content: space-between;
-                color: whitesmoke;
-                border: rgba($color: whitesmoke, $alpha: 0.5) solid 1px;
-                transition: all 600ms ease-in-out;
-                .cards-min-info {
-                    display: none;
-                    width: 100%;
-                    margin: 0 12px;
-                }
-                .itemname, .seemore{
-                    margin-top: 12px;
-                    width: 44%;
-                    height: 3rem;
-                }
-                .itemname {
-                    margin-left: 12px;
+                h1{
+                    @include flexrow;
+                    text-transform: uppercase;
+                    word-spacing: 1px;
+                    font-family: k2d;
+                    color: white;
                     span {
-                        color: beige;
-                        opacity: 0.5;
+                        text-transform: capitalize;
+                        font-weight: lighter;
                     }
                 }
-                .seemore {
-                    margin-right: 12px;
-                    text-align: end;
-                }
-            }
-            div:hover {
-                max-height: auto;
-                height: 20rem;
-                transition: all 700ms ease-in-out;
-                border: rgba($color: $principal-color, $alpha: 1) solid 1px;
-                .cards-min-info {
-                    display: block;
-                    opacity: 1;
-                    transition: all 1s;
+                p:nth-of-type(1){
+                    opacity: 0.5;
                 }
             }
         }
-        .mard1 { grid-area: 1 / 1 / 2 / 2; }
-        .mard2 { grid-area: 2 / 1 / 3 / 2; }
-        .mard3 { grid-area: 3 / 1 / 4 / 2; }
+    }
+    footer{
+        background-color: whitesmoke;
+        width: 100%;
+        height: 10vh;
     }
 }
-//Desktop
-//@media only screen and (min-width: 992px){}
-//Huge
-//@media only screen and (min-width: 1280px){}
-
-///-----------------------------------
-
-//cluits
-
-
 

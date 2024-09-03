@@ -7,533 +7,89 @@
   padding: 0;
   border: 0;
   text-decoration: none;
+  color: black;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  gap: 10rem;
-  background: rgb(222, 167, 167);
-  background: linear-gradient(0deg, rgb(15, 15, 15) 70%, rgb(42, 42, 42) 87%, rgb(65, 65, 65) 91%, rgb(100, 100, 100) 97%, rgb(126, 126, 126) 100%);
+a::after {
+  content: "";
+  width: 100px;
+  height: 20px;
+  color: aliceblue;
 }
-body #furro {
-  z-index: 1;
-  transition: all 600ms ease-in-out;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  position: fixed;
-  top: 35%;
-  left: 0px;
-  width: auto;
-  height: auto;
-  background-color: #ac0202;
-  padding: 1rem;
-  padding-left: 4rem;
-  font-size: 2rem;
-  text-decoration: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-body #furro p::first-letter {
-  font-family: deathnote;
-  font-weight: bolder;
-}
-body #furro div:nth-of-type(1) {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-body #furro div:nth-of-type(1) p {
-  color: black;
-}
-body #furro div:nth-of-type(1) a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 100%;
-  border: whitesmoke solid 1px;
-}
-body #furro div:nth-of-type(1) a p {
-  width: auto;
-  height: auto;
-  color: whitesmoke;
-  font-size: 1rem;
-  font-family: "Courier New", Courier, monospace;
-}
-body #furro:hover {
-  background-color: rgba(172, 2, 2, 0.1);
-  z-index: 1;
-  width: 30rem;
-  height: 40rem;
-  right: 0px;
-  transition: all 1s;
-  animation: ease-in;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-body #furro:hover div:nth-of-type(1) p {
-  color: whitesmoke;
-}
-body #furro:hover div:nth-of-type(2) {
-  width: 90%;
-  height: 70%;
-  background-color: whitesmoke;
-}
-body #furro:hover div:nth-of-type(2) div {
-  width: 90%;
-  height: 60%;
-  background-color: rgb(105, 72, 72);
-}
+
 body header {
-  position: fixed;
+  background-color: whitesmoke;
+  color: black;
+  width: 100vw;
+  height: 10vh;
   display: flex;
-  width: 100%;
-  height: 4rem;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  font-family: k2d;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
+  gap: 0px;
 }
 body header #logo {
-  color: black;
-  letter-spacing: 10px;
+  font-size: 2.5em;
+}
+body header #logo span img {
+  width: min;
+  height: 0.75em;
+}
+body header #logo::after {
+  color: #ac0202;
+  content: "studio";
+  width: 12px;
+  height: 12px;
+  font-size: 0.6em;
+  font-weight: lighter;
+  margin-left: 0.3em;
 }
 body header nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: -moz-max-content;
-  width: max-content;
-  height: 4rem;
-  gap: 40px;
-}
-body header nav a {
-  color: black;
-  opacity: 1;
-}
-body header a {
-  color: black;
-}
-body header #menup::after {
-  width: 1rem;
-  height: 3rem;
-  background-color: #ac0202;
-  color: #ac0202;
-  content: "_";
-}
-body #introducing {
-  display: flex;
-  margin-top: 10rem;
-  justify-content: center;
-}
-body #introducing .ah {
-  background-color: #b66363;
-  width: 90%;
-  min-width: none;
-  height: 100rem;
-}
-body #introducing #collabs {
-  background-color: aqua;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-body #introducing #info {
-  width: 50%;
-  height: 50rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(100, 100, 100, 0.1);
-}
-body #introducing #info h1 {
-  font-family: k2d;
-}
-body #introducing #info h1::first-letter {
-  text-transform: capitalize;
-  color: rgb(155, 120, 120);
-}
-body #introducing #info img {
-  width: 100%;
-  height: 100%;
-  filter: brightness(0) saturate(100%) invert(40%) sepia(1%) saturate(2095%) hue-rotate(28deg) brightness(108%) contrast(84%);
-}
-body #introducing #information {
-  background-color: aqua;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  margin: 10rem 0;
+  flex-direction: row;
+  gap: 10px;
 }
 body main {
   display: flex;
-  height: auto;
-  gap: 50px;
-  justify-content: center;
-  margin: 4rem 0;
+  flex-direction: row;
+  background-color: white;
+  width: 100%;
+  height: 80vh;
 }
-body main .cards {
-  width: 80%;
-  min-width: 1.5em;
-  height: 35rem;
-  padding: 10px;
-  background-color: whitesmoke;
-  background-color: black;
-  opacity: 0.4;
-}
-body main .cards .theme {
-  color: white;
+body main article {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
-}
-body main .cards .theme h2 {
-  text-transform: uppercase;
-  font-family: k2d;
-}
-body main .cards .more {
-  display: flex;
-  position: relative;
-  top: 15.5rem;
-  width: 100%;
-  min-width: 1.5em;
-  height: 50%;
-}
-body main .cards .more #more {
-  color: white;
-  width: 90%;
-  height: 100%;
-  font-size: 2rem;
-  margin: auto auto;
-  transition: all 400ms ease-in-out;
-}
-body main .cards .more #more:hover {
-  background-color: black;
-  color: red;
-  text-decoration: none;
-  transition: all 400ms ease-in;
-  font-weight: bolder;
-}
-body main section:hover {
-  opacity: 1;
-  transition: all 1s;
-}
-body .comingsoon {
-  display: flex;
-  width: 100%;
-  height: 15rem;
   background-color: #ac0202;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-}
-body .comingsoon p {
-  font-family: deathnote;
-  font-weight: bolder;
-}
-body .muits {
-  height: 30rem;
-  padding: 0 10%;
+  width: 60vw;
+  height: 60vh;
   margin: auto;
 }
-body .muits article {
+body main article img {
   width: 50%;
-}
-body .muits article:nth-of-type(1) {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100%;
 }
-body .muits article:nth-of-type(1) div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 90%;
-  gap: 30px;
-}
-body .muits article:nth-of-type(1) div h1 {
-  font-size: 3em;
-  font-family: k2d;
-  text-indent: 20px;
-  color: whitesmoke;
-}
-body .muits article:nth-of-type(1) div h1 span {
-  color: #ac0202;
-}
-body .muits article:nth-of-type(1) div h1 span img {
-  height: 1em;
-}
-body .muits article:nth-of-type(1) div p {
-  width: 100%;
-  font-size: 1em;
-  font-weight: lighter;
-  color: rgba(172, 2, 2, 0.5);
-}
-body .muits article:nth-of-type(1) a {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 10%;
-  justify-content: end;
-  align-items: end;
-}
-body .muits article:nth-of-type(1) a p {
-  width: -moz-max-content;
-  width: max-content;
-  height: -moz-max-content;
-  height: max-content;
-  padding: 10px;
-  background-color: #000000;
+body main article div {
   font-size: 2em;
+  margin: auto;
 }
-body .muits article:nth-of-type(2) {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-}
-body .muits article:nth-of-type(2) .mards {
-  background-image: url(../img/logos/logo.svg);
-  background-size: cover;
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-}
-body .muits article:nth-of-type(2) .mards div {
+body main article div h1 {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  height: 5rem;
-  position: relative;
-  float: inline-end;
-  justify-content: space-between;
-  color: whitesmoke;
-  border: rgba(245, 245, 245, 0.5) solid 1px;
-  transition: all 600ms ease-in-out;
+  text-transform: uppercase;
+  word-spacing: 1px;
+  font-family: k2d;
+  color: white;
 }
-body .muits article:nth-of-type(2) .mards div .cards-min-info {
-  display: none;
-  width: 100%;
-  margin: 0 12px;
+body main article div h1 span {
+  text-transform: capitalize;
+  font-weight: lighter;
 }
-body .muits article:nth-of-type(2) .mards div .itemname, body .muits article:nth-of-type(2) .mards div .seemore {
-  margin-top: 12px;
-  width: 44%;
-  height: 3rem;
-}
-body .muits article:nth-of-type(2) .mards div .itemname {
-  margin-left: 12px;
-}
-body .muits article:nth-of-type(2) .mards div .itemname span {
-  color: beige;
+body main article div p:nth-of-type(1) {
   opacity: 0.5;
 }
-body .muits article:nth-of-type(2) .mards div .seemore {
-  margin-right: 12px;
-  text-align: end;
-}
-body .muits article:nth-of-type(2) .mards div:hover {
-  max-height: auto;
-  height: 20rem;
-  transition: all 700ms ease-in-out;
-  border: #ac0202 solid 1px;
-}
-body .muits article:nth-of-type(2) .mards div:hover .cards-min-info {
-  display: block;
-  opacity: 1;
-  transition: all 1s;
-}
-body .muits article:nth-of-type(2) .mard1 {
-  grid-area: 1/1/3/2;
-}
-body .muits article:nth-of-type(2) .mard2 {
-  grid-area: 1/2/2/3;
-}
-body .muits article:nth-of-type(2) .mard3 {
-  grid-area: 2/2/3/3;
-}
-body .muits .outlinks {
-  color: #ac0202;
-}
-body .muits .outlinks:hover {
-  color: whitesmoke;
-}
-
-#cv {
-  background: whitesmoke;
-  width: 100vw;
-  height: 141.45vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0;
-  margin: 0;
-}
-#cv header {
-  background: #b66363;
+body footer {
+  background-color: whitesmoke;
   width: 100%;
-  height: 12rem;
-  position: static;
-}
-#cv header #logo {
-  background-color: whitesmoke;
-  width: 60%;
-  height: auto;
-  align-items: flex-start;
-  font-size: 1.3em;
-  display: flex;
-  flex-direction: column;
-}
-#cv header #logo span {
-  font-size: 0.5em;
-  letter-spacing: 2px;
-  opacity: 0.6;
-}
-#cv header nav {
-  background: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 5px;
-  height: auto;
-  font-size: 0.5em;
-}
-#cv .maincv {
-  background-color: white;
-  width: 60%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-#cv .maincv section {
-  background-color: whitesmoke;
-}
-#cv aside {
-  background-color: white;
-  width: 40%;
-  height: auto;
-}
-#cv aside article {
-  background-color: whitesmoke;
-}
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  width: 2rem;
-  height: 2rem;
-  gap: 10px;
-}
-.logo img {
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    background-color: gray;
-  }
-  body #main {
-    margin-top: 0;
-  }
-  body #main #info {
-    width: 90%;
-    height: 50rem;
-  }
-  body #main01 {
-    display: flex;
-    flex-direction: column;
-  }
-  body #main01 section {
-    margin: auto;
-    border: #ac0202 solid 1px;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 1000px) {
-  article:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  }
-  article:nth-of-type(2) .mards {
-    background-image: url(../img/logos/logo.svg);
-    background-size: cover;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-  }
-  article:nth-of-type(2) .mards div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    height: 5rem;
-    position: relative;
-    float: inline-end;
-    justify-content: space-between;
-    color: whitesmoke;
-    border: rgba(245, 245, 245, 0.5) solid 1px;
-    transition: all 600ms ease-in-out;
-  }
-  article:nth-of-type(2) .mards div .cards-min-info {
-    display: none;
-    width: 100%;
-    margin: 0 12px;
-  }
-  article:nth-of-type(2) .mards div .itemname, article:nth-of-type(2) .mards div .seemore {
-    margin-top: 12px;
-    width: 44%;
-    height: 3rem;
-  }
-  article:nth-of-type(2) .mards div .itemname {
-    margin-left: 12px;
-  }
-  article:nth-of-type(2) .mards div .itemname span {
-    color: beige;
-    opacity: 0.5;
-  }
-  article:nth-of-type(2) .mards div .seemore {
-    margin-right: 12px;
-    text-align: end;
-  }
-  article:nth-of-type(2) .mards div:hover {
-    max-height: auto;
-    height: 20rem;
-    transition: all 700ms ease-in-out;
-    border: #ac0202 solid 1px;
-  }
-  article:nth-of-type(2) .mards div:hover .cards-min-info {
-    display: block;
-    opacity: 1;
-    transition: all 1s;
-  }
-  article:nth-of-type(2) .mard1 {
-    grid-area: 1/1/2/2;
-  }
-  article:nth-of-type(2) .mard2 {
-    grid-area: 2/1/3/2;
-  }
-  article:nth-of-type(2) .mard3 {
-    grid-area: 3/1/4/2;
-  }
+  height: 10vh;
 }/*# sourceMappingURL=style.css.map */
