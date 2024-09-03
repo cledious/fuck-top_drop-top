@@ -1,5 +1,5 @@
 $principal-color:#ac0202;
-$second-color: rgba(126,126,126,1);
+$second-color: rgb(232, 232, 232);
 $special-font: deathnote;
 @font-face {
     font-family: deathnote;
@@ -17,7 +17,7 @@ $special-font: deathnote;
     padding: 0 10%;
 }
 @mixin filter {
- filter: brightness(0) saturate(100%) invert(40%) sepia(1%) saturate(2095%) hue-rotate(28deg) brightness(108%) contrast(84%);
+ filter: brightness(0) saturate(100%) invert(12%) sepia(81%) saturate(7462%) hue-rotate(9deg) brightness(69%) contrast(110%);
 }
 *{
     margin: 0;
@@ -26,31 +26,32 @@ $special-font: deathnote;
     text-decoration: none;
     color: black;
 }
-a::after{
-    content:'';
-    width: 100px;
-    height: 20px;
-    color: aliceblue;
+a{
+    color: whitesmoke;
+}
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: $principal-color;
 }
 body {
+    background-color: rgb(20, 3, 3);
     header{
-        background-color: whitesmoke;
         color: black;
         //
         width: 100vw;
         height: 10vh;
         //
         @include flexrow;
-        justify-content: space-between;
+        justify-content: space-around;
+        gap: 15vw;
         align-items: center;
         text-transform: uppercase;
-        gap: 0px;
         #logo{
             font-size: 2.5em; 
             span{
                 img{
                     width: min;
-                    height: 0.75em;
+                    height: 0.80em;
                 }
             }
         }#logo::after{
@@ -67,12 +68,16 @@ body {
             gap: 10px;
         }
     }
+    #divides{
+        margin: auto;
+        width: 90vw;
+        height: 0.2vh;
+        background-color: $principal-color;
+    }
     main{
         @include flexrow;
-        background-color: white;
         width: 100%;
-        height: 80vh;
-
+        height: 79vh;
         article{
             @include flexrow;
             background-color: #ac0202;
@@ -94,7 +99,7 @@ body {
                     text-transform: uppercase;
                     word-spacing: 1px;
                     font-family: k2d;
-                    color: white;
+                    color: whitesmoke;
                     span {
                         text-transform: capitalize;
                         font-weight: lighter;
@@ -107,9 +112,37 @@ body {
         }
     }
     footer{
-        background-color: whitesmoke;
+        @include flexrow;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 0.6em;
+        gap: 3em;
         width: 100%;
         height: 10vh;
+        a{
+            margin-right: 8em;
+            @include flexrow;
+            align-items: center;
+            img{
+                height: 4vh;
+                @include filter;
+                margin-right: 1.5em;
+            }
+            p{
+                color: whitesmoke;
+                font-size: 2.5em;
+                text-transform: uppercase;
+                span{
+                    color: whitesmoke;
+                    font-weight: bolder;
+                }
+            }
+        }
+        #downlogo{
+            display: inline-flex;
+            position: absolute;
+            left: 8em;
+        }
     }
 }
 

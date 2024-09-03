@@ -10,31 +10,35 @@
   color: black;
 }
 
-a::after {
-  content: "";
-  width: 100px;
-  height: 20px;
-  color: aliceblue;
+a {
+  color: whitesmoke;
 }
 
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ac0202;
+}
+
+body {
+  background-color: rgb(20, 3, 3);
+}
 body header {
-  background-color: whitesmoke;
   color: black;
   width: 100vw;
   height: 10vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 15vw;
   align-items: center;
   text-transform: uppercase;
-  gap: 0px;
 }
 body header #logo {
   font-size: 2.5em;
 }
 body header #logo span img {
   width: min;
-  height: 0.75em;
+  height: 0.8em;
 }
 body header #logo::after {
   color: #ac0202;
@@ -50,12 +54,17 @@ body header nav {
   flex-direction: row;
   gap: 10px;
 }
+body #divides {
+  margin: auto;
+  width: 90vw;
+  height: 0.2vh;
+  background-color: #ac0202;
+}
 body main {
   display: flex;
   flex-direction: row;
-  background-color: white;
   width: 100%;
-  height: 80vh;
+  height: 79vh;
 }
 body main article {
   display: flex;
@@ -79,7 +88,7 @@ body main article div h1 {
   text-transform: uppercase;
   word-spacing: 1px;
   font-family: k2d;
-  color: white;
+  color: whitesmoke;
 }
 body main article div h1 span {
   text-transform: capitalize;
@@ -89,7 +98,37 @@ body main article div p:nth-of-type(1) {
   opacity: 0.5;
 }
 body footer {
-  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.6em;
+  gap: 3em;
   width: 100%;
   height: 10vh;
+}
+body footer a {
+  margin-right: 8em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body footer a img {
+  height: 4vh;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(81%) saturate(7462%) hue-rotate(9deg) brightness(69%) contrast(110%);
+  margin-right: 1.5em;
+}
+body footer a p {
+  color: whitesmoke;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+body footer a p span {
+  color: whitesmoke;
+  font-weight: bolder;
+}
+body footer #downlogo {
+  display: inline-flex;
+  position: absolute;
+  left: 8em;
 }/*# sourceMappingURL=style.css.map */
