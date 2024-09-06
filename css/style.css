@@ -54,87 +54,65 @@ body header nav {
   flex-direction: row;
   gap: 10px;
 }
-body header .header-contact_form {
-  display: none;
-  position: absolute;
-  width: 100%;
+body aside {
+  width: auto;
   height: 100vh;
-  transition: all 600ms ease-in-out;
-  animation: show 0.6s linear;
-}
-body header .header-contact_form .focusbg {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-body header .header-contact_form form {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 400px;
-  height: 300px;
-  background-color: rgba(0, 0, 0, 0.8);
-  gap: 10px;
+  position: fixed;
+  /* The side navigation menu */
+  /* The navigation menu links */
+  /* When you mouse over the navigation links, change their color */
+  /* Position and style the close button (top right corner) */
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+}
+body aside .sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 10vh; /* Stay at the top */
+  background-color: rgba(0, 0, 0, 0.5); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+body aside .sidenav:hover {
+  background-color: black;
+}
+body aside .sidenav a {
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+body aside .sidenav a:hover {
+  color: #f1f1f1;
+}
+body aside .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+body aside #main {
+  transition: margin-left 0.5s;
   padding: 20px;
-  z-index: 1;
-  margin-top: 40%;
 }
-body header .header-contact_form form h3 {
-  font-size: 2em;
-  color: whitesmoke;
+body .map-aside {
+  left: -5vw;
+  background-color: red;
 }
-body header .header-contact_form form div {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 10px;
+body .map-aside .sidenav {
+  left: 0;
 }
-body header .header-contact_form form div label {
-  font-size: 1.5em;
-  color: whitesmoke;
+body .contact-aside {
+  right: 0;
 }
-body header .header-contact_form form div input {
-  font-size: 2em;
-  width: 70%;
-}
-body header .header-contact_form form div textarea {
-  width: 70%;
-  height: -moz-max-content;
-  height: max-content;
-}
-body header .header-contact_form form div select {
-  height: 2.5em;
-}
-body header .header-contact_form form div select option {
-  font-size: 1.5em;
-}
-body header .header-contact_form form .buttons {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  justify-content: flex-end;
-  gap: 10px;
-}
-body header .header-contact_form form .buttons button {
-  font-size: 1.5em;
-  padding: 0.5em 1.5em;
-  border-radius: 10px;
-}
-body header .header-contact_form form .buttons button:active {
-  background-color: green;
-  color: whitesmoke;
-}
-body header .header-contact_form form .buttons button:hover {
-  border: solid 1px whitesmoke;
-}
-body header .header-contact_form form .buttons #submit:hover {
-  background-color: green;
-}
-body header .header-contact_form form .buttons #reset:hover {
-  background-color: rgb(140, 140, 18);
+body .contact-aside .sidenav {
+  right: 0;
 }
 body #divides {
   margin: auto;
@@ -211,53 +189,13 @@ body footer a p span {
   color: whitesmoke;
   font-weight: bolder;
 }
-body .message {
-  width: 100%;
-  position: relative;
-  margin-bottom: 60px;
-  display: flex;
-  justify-content: center;
-}
-body .message .success {
-  font-size: 20px;
-  color: green;
-  position: absolute;
-  animation: buttons 0.3s linear;
-  display: none;
-}
-body .message .danger {
-  font-size: 20px;
-  color: red;
-  position: absolute;
-  transition: 0.3s;
-  animation: buttons 0.3s linear;
-  display: none;
-}
-@keyframes buttons {
-  0% {
-    transform: scale(0.1);
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
   }
-  50% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes show {
-  0% {
-    margin-top: -150vh;
-  }
-  25% {
-    margin-top: 112.5;
-  }
-  50% {
-    margin-top: -75;
-  }
-  75% {
-    margin-top: 37.5;
-  }
-  100% {
-    margin-top: -1vh;
+  .sidenav a {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */

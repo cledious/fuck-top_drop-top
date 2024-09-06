@@ -8,57 +8,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logos/logo.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <a id="map" href="#">map</a>
+        <a id="map" href="#" onclick="openMap()">map</a>
         <a id="logo" href="/index.html">pensh<span><img src="./img/logos/logo.svg" alt=""></span>ks</a>
         <nav href="#">
             <a href="./pages/cluits.html">cluits</a>
-            <a href="#" id="contacttrigger">contact</a>
+            <a href="#" id="contacttrigger"onclick="openContact()">contact</a>
         </nav>
-        <div class="header-contact_form">
-            <div class="focusbg"></div>
-            <form action="https://formsubmit.co/penshoks@gmail.com" method="POST">
-                <h3>i would like contact with you</h3>
-                <div>
-                    <label for="name">name</label>
-                    <input type="text" name="name" id="name" placeholder="fill with your name" required aria-required="please fill with your name">
-                </div>
-                <div>
-                    <label for="msg">message</label>
-                    <textarea name="msg" id="msg" placeholder="tell me anything here..." required aria-required="please tell the reason to make contact"></textarea>
-                </div>
-                <div>   
-                    <label for="number">telephone</label>
-                    <input type="tel" name="tel" id="number" placeholder="...">
-                </div>
-                <div>
-                    <label for="email">email</label>
-                    <input id="email" name="email" type="email" required>
-                </div>
-                <div>
-                    <label for="subject">subject</label>
-                    <select name="subject" id="subject">
-                        <option value="work">work</option>
-                        <option value="contact">just contact</option>
-                        <option value="budget">budget</option>
-                        <option value="help">help</option>
-                    </select>
-                </div>
-                <div class="buttons">
-                    <button id="submit" type="submit" onclick="message()">send</button>
-                    <button id="reset" type="reset">reset</button>
-                </div>
-                <div class="message">
-                <div class="success" id="success">your message successfully sent!</div>
-                <div class="danger" id="danger">fields can't be empty</div>
-                </div>
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
-                <input type="hidden" name="_captcha" value="false">
-            </form>
-        </div>
     </header>
+    <aside class="map-aside" id="mapAside">
+        <div id="mapContent" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMap()">&times;</a>
+            <a href="#">map About</a>
+            <a href="#">map Services</a>
+            <a href="#">map Clients</a>
+            <a href="#">map Contact</a>
+          </div>
+          
+          <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+          <div id="main">
+            ...
+          </div>
+    </aside>
+    <aside class="contact-aside" id="contactAside">
+        <div id="contactContent" class="sidenav" id="contactAside">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+          
+          <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+          <div id="main">
+            ...
+          </div>
+    </aside>
     <div id="divides"></div>
     <main>
         <article>

@@ -70,84 +70,67 @@ body {
             @include flexrow;
             gap: 10px;
         }
-        .header-contact_form{
-            //@include flexrow;
-            display: none;
+    }
+    aside{
+        width: auto;
+        height: 100vh;
+        @include flexcol;
+        position: fixed;
+        /* The side navigation menu */
+        .sidenav {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 10vh; /* Stay at the top */
+            background-color: rgba($color: #000000, $alpha: 0.5); /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+        .sidenav:hover {
+            background-color: rgba($color: #000000, $alpha: 1.0);
+        }
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
             position: absolute;
-            width: 100%;
-            height: 100vh;
-            transition: all 600ms ease-in-out;
-            animation: show .6s linear;
-            .focusbg{
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background-color: rgba($color: #000000, $alpha: 0.5)
-            }
-            form{
-                @include flexcol;
-                margin: auto;
-                width: 400px;
-                height: 300px;
-                background-color: rgba($color: #000000, $alpha: 0.8);
-                gap: 10px;
-                padding: 20px;
-                z-index: 1;
-                margin-top: 40%;
-                h3{
-                    font-size: 2em;
-                    color: whitesmoke;
-                }
-                div{
-                    @include flexrow;
-                    align-items: flex-start;
-                    justify-content: space-between;
-                    gap: 10px;
-                    label{
-                        font-size: 1.5em;
-                        color: whitesmoke;
-                    }
-                    input{
-                        font-size: 2em;
-                        width: 70%;
-                    }
-                    textarea{
-                        width: 70%;
-                        height: max-content;
-                    }
-                    select{
-                        height: 2.5em;
-                        option{
-                            font-size: 1.5em;
-                        }
-                    }
-                }
-                .buttons{
-                    @include flexrow;
-                    padding: 10px;
-                    justify-content: flex-end;
-                    gap: 10px;
-                    button{
-                        font-size: 1.5em;
-                        padding: 0.5em 1.5em;
-                        @include radius;
-                    }
-                    button:active{
-                        background-color: green;
-                        color: whitesmoke;
-                    }
-                    button:hover {
-                        border: solid 1px whitesmoke;
-                    }
-                    #submit:hover{
-                        background-color: green;
-                    }
-                    #reset:hover{
-                        background-color: rgb(140, 140, 18);
-                    }
-                }
-            }
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+    }
+    .map-aside{
+        left: -05vw;
+        background-color: red;
+        .sidenav{
+            left: 0;
+        }
+    }
+    .contact-aside{
+        right: 0;
+        .sidenav{
+            right: 0;
         }
     }
     #divides{
@@ -223,56 +206,10 @@ body {
             }
         }
     }
-  
-    .message{
-        width: 100%;
-        position: relative;
-        margin-bottom: 60px;
-        display: flex;
-        justify-content: center;
-    }
-    .message .success{
-        font-size: 20px;
-        color: green;
-        position: absolute;
-        animation: buttons .3s linear;
-        display: none;
-    }
-    .message .danger{
-        font-size: 20px;
-        color: red;
-        position: absolute;
-        transition: .3s;
-        animation: buttons .3s linear;
-        display: none;
-    }
-    @keyframes buttons{
-        0%{
-            transform: scale(0.1);
-        }
-        50%{
-            transform: scale(0.5);
-        }
-        100%{
-            transform: scale(1);
-        }
-    }
-    @keyframes show{
-        0%{
-            margin-top: -150vh;
-        }
-        25%{
-            margin-top: 112.5;
-        }
-        50%{
-            margin-top: -75;
-        }
-        75%{
-            margin-top: 37.5;
-        }
-        100%{
-            margin-top: -1vh;
-        }
-    }
 }
 
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

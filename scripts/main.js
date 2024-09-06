@@ -1,30 +1,23 @@
-function message(){
-    var Name = document.getElementById('name');
-    var email = document.getElementById('email');
-    var msg = document.getElementById('msg');
-    const success = document.getElementById('success');
-    const danger = document.getElementById('danger');
-
-    if(Name.value === '' || email.value === '' || msg.value === ''){
-        danger.style.display = 'block';
-    }
-    else{
-        setTimeout(() => {
-            Name.value = '';
-            email.value = '';
-            msg.value = '';
-        }, 2000);
-
-        success.style.display = 'block';
-    }
-
-
-    setTimeout(() => {
-        danger.style.display = 'none';
-        success.style.display = 'none';
-    }, 4000);
+/* Set the width of the side navigation to 250px */
+function openMap() {
+    document.getElementById("mapContent").style.width = "250px";
+    document.getElementsById('mapAside').style.display = 'block';
+  }
+  
+  /* Set the width of the side navigation to 0 */
+  function closeMap() {
+    document.getElementById("mapContent").style.width = "0";
+    document.getElementsById('mapAside').style.display = 'none';
 }
-function show() {
-    const container = document.getElementsByClassName('header-contact_form');
-    const trigger = document.getElementById('contacttrigger');
+//----------------------------------------------------------------------
+/* Set the width of the side navigation to 250px */
+function openContact() {
+    document.getElementById("contactContent").style.width = "250px";
+    document.getElementsByTagName('contactAside').style.display = 'block';
+  }
+  
+  /* Set the width of the side navigation to 0 */
+  function closeContact() {
+    document.getElementById("contactContent").style.width = "0";
+    document.getElementsByTagName('contactAside').style.display = 'none';
 }
