@@ -54,6 +54,88 @@ body header nav {
   flex-direction: row;
   gap: 10px;
 }
+body header .header-contact_form {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  transition: all 600ms ease-in-out;
+  animation: show 0.6s linear;
+}
+body header .header-contact_form .focusbg {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body header .header-contact_form form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 400px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.8);
+  gap: 10px;
+  padding: 20px;
+  z-index: 1;
+  margin-top: 40%;
+}
+body header .header-contact_form form h3 {
+  font-size: 2em;
+  color: whitesmoke;
+}
+body header .header-contact_form form div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+body header .header-contact_form form div label {
+  font-size: 1.5em;
+  color: whitesmoke;
+}
+body header .header-contact_form form div input {
+  font-size: 2em;
+  width: 70%;
+}
+body header .header-contact_form form div textarea {
+  width: 70%;
+  height: -moz-max-content;
+  height: max-content;
+}
+body header .header-contact_form form div select {
+  height: 2.5em;
+}
+body header .header-contact_form form div select option {
+  font-size: 1.5em;
+}
+body header .header-contact_form form .buttons {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: flex-end;
+  gap: 10px;
+}
+body header .header-contact_form form .buttons button {
+  font-size: 1.5em;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+}
+body header .header-contact_form form .buttons button:active {
+  background-color: green;
+  color: whitesmoke;
+}
+body header .header-contact_form form .buttons button:hover {
+  border: solid 1px whitesmoke;
+}
+body header .header-contact_form form .buttons #submit:hover {
+  background-color: green;
+}
+body header .header-contact_form form .buttons #reset:hover {
+  background-color: rgb(140, 140, 18);
+}
 body #divides {
   margin: auto;
   width: 90vw;
@@ -64,7 +146,7 @@ body main {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 79vh;
+  height: 80vh;
 }
 body main article {
   display: flex;
@@ -100,9 +182,11 @@ body main article div p:nth-of-type(1) {
 body footer {
   display: flex;
   flex-direction: row;
+  position: fixed;
+  z-index: 2;
   align-items: center;
   justify-content: flex-end;
-  font-size: 0.6em;
+  font-size: 0.5em;
   gap: 3em;
   width: 100%;
   height: 10vh;
@@ -114,7 +198,7 @@ body footer a {
   align-items: center;
 }
 body footer a img {
-  height: 4vh;
+  height: 2.5vh;
   filter: brightness(0) saturate(100%) invert(12%) sepia(81%) saturate(7462%) hue-rotate(9deg) brightness(69%) contrast(110%);
   margin-right: 1.5em;
 }
@@ -127,8 +211,53 @@ body footer a p span {
   color: whitesmoke;
   font-weight: bolder;
 }
-body footer #downlogo {
-  display: inline-flex;
+body .message {
+  width: 100%;
+  position: relative;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+body .message .success {
+  font-size: 20px;
+  color: green;
   position: absolute;
-  left: 8em;
+  animation: buttons 0.3s linear;
+  display: none;
+}
+body .message .danger {
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  transition: 0.3s;
+  animation: buttons 0.3s linear;
+  display: none;
+}
+@keyframes buttons {
+  0% {
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes show {
+  0% {
+    margin-top: -150vh;
+  }
+  25% {
+    margin-top: 112.5;
+  }
+  50% {
+    margin-top: -75;
+  }
+  75% {
+    margin-top: 37.5;
+  }
+  100% {
+    margin-top: -1vh;
+  }
 }/*# sourceMappingURL=style.css.map */
