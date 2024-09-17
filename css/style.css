@@ -21,6 +21,13 @@ a:hover {
 
 body {
   background-color: rgb(20, 3, 3);
+  /* Dropdown Button */
+  /* Dropdown button on hover & focus */
+  /* The container <div> - needed to position the dropdown content */
+  /* Dropdown Content (Hidden by Default) */
+  /* Links inside the dropdown */
+  /* Change color of dropdown links on hover */
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 }
 body header {
   color: black;
@@ -61,9 +68,6 @@ body aside {
   flex-direction: column;
   position: fixed;
   /* The side navigation menu */
-  /* The navigation menu links */
-  /* When you mouse over the navigation links, change their color */
-  /* Position and style the close button (top right corner) */
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 }
 body aside .sidenav {
@@ -77,25 +81,16 @@ body aside .sidenav {
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-body aside .sidenav:hover {
-  background-color: black;
-}
-body aside .sidenav a {
-  padding: 8px 8px 8px 32px;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-body aside .sidenav a:hover {
-  color: #f1f1f1;
-}
 body aside .sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: whitesmoke;
+}
+body aside .sidenav:hover {
+  background-color: black;
 }
 body aside #main {
   transition: margin-left 0.5s;
@@ -188,6 +183,41 @@ body footer a p {
 body footer a p span {
   color: whitesmoke;
   font-weight: bolder;
+}
+body .dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+body .dropbtn:hover, body .dropbtn:focus {
+  background-color: #2980B9;
+}
+body .dropdown {
+  position: relative;
+  display: inline-block;
+}
+body .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+body .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+body .dropdown-content a:hover {
+  background-color: #ddd;
+}
+body .show {
+  display: block;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
