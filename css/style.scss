@@ -116,6 +116,28 @@ body {
         right: 0;
         .sidenav{
             right: 0;
+            @include flexcol;
+            background-color: #ac0202;
+            nav{
+                background-color: #ac0202;
+                text-transform: uppercase;
+                display: flex;
+                justify-content: space-between;
+            }
+            #contactform{
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+                input{
+                    width: 100%;
+                    height: 2em;
+                    background-color: #ac0202;
+                }
+                button{
+                    background-color: #ac0202;
+                }
+            }
+
         }
     }
     #divides{
@@ -197,3 +219,4 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
