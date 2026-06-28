@@ -3,76 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLEDIOUS</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/logos/logo.ico" type="image/x-icon">
+    <title>PENSHOKS</title>
+    <link rel="icon" href="./img/logos/mainlogo.svg" type="image/x-icon">
 </head>
 <body>
     <header>
-        <a id="map" href="#" onclick="openMap()">map</a>
-        <a id="logo" href="/index.html">pensh<span><img src="./img/logos/logo.svg" alt=""></span>ks</a>
-        <nav href="#">
-            <a href="./pages/cluits.html">cluits</a>
-            <a href="#" id="contacttrigger"onclick="openContact()">contact</a>
-        </nav>
-    </header>
-    <aside class="map-aside" id="mapAside">
-        <ul id="mapContent" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeMap()">&times;</a>
-            <li href="#">map About</li>
-            <li href="#">map Services</li>
-            <li href="#">map Clients</li>
-            <li href="#">map Contact</li>
-        </ul>
-          
-          <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-          <div id="main">
-            ...
-          </div>
-    </aside>
-    <aside class="contact-aside" id="contactAside">
-        <ul id="contactContent" class="sidenav" id="contactAside">
-            <li href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</li>
-             <nav>
-                <a href="">instagram</a>
-                <a href="">linkedin</a>
-             </nav>
-             <form id="contactform">
-                <input type="text" name="name" id="name" placeholder="your name...">
-                <input type="text" name="position" id="position" placeholder="position...">
-                <input type="tel" name="tel" id="tel" placeholder="contact number...">
-                <button type="submit">submit</button>
-             </form>
-        </ul>
-    </aside>
-    <div id="divides"></div>
-    <main>
-        <article>
-            <img src="./img/1671934634932.svg" alt="illustration" >
-            <div>
-                <h1><span>by</span> c l e d i o u s</h1>
-                <p>UX/UI designer &bull; web designer</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora facere soluta adipisci. Cupiditate voluptatum repudiandae, sit error perspiciatis voluptate!</p>
+        <nav>
+            <a href="index.html" class="logo-link" aria-label="Penshoks home">
+                <img src="./img/logos/mainlogo.svg" alt="Penshoks logo">
+            </a>
+
+            <form class="search-form" action="#" method="get" role="search">
+                <input type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
+                <button type="submit" aria-label="Buscar">Buscar</button>
+            </form>
+
+            <div class="nav-actions">
+                <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-        </article>
-    </main>
-    <footer>
-        <a href="https://www.coursera.org/user/7b77aa3d4bbb3dcb6209efac0321c2c3">
-            <img src="../img/logos/coursera logo.png" alt="">
-            <p>certificates</p>
-        </a>
-        <a>
-            <img href="https://www.artstation.com/cledious" src="./img/logos/Artstation icon.webp" alt="portfolio">
-            <p><span>port</span>folio</p>
-        </a>
-        <a>
-            <img src="./img/logos/instagram-logo.webp" alt="instagram">
-            <p>account</p>
-        </a>
-    </footer> 
-    <script src="./scripts/main.js"></script>
+        </nav>
+
+        <div class="dropdown-menu" id="mainMenu" aria-hidden="true">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="main">
+        <div class="main__content">
+            <h1>Welcome to <span class="brand-name">PENSHOKS</span></h1>
+            <p>Discover the world of pens and stationery with us. Explore our collection and find the perfect pen for your needs.</p>
+            <button id="shopNowBtn" class="btn">Shop Now</button>
+        </div>
+        <div class="clothes-selection" style="display:none;">
+            <div class="clothes-selection__header">
+                <div>
+                    <h2 class="clothes-selection__title">Shop categories</h2>
+                    <p class="clothes-selection__subtitle">Selecciona una categoría y descubre 10 productos diseñados para ella.</p>
+                </div>
+            </div>
+            <div class="clothes-wheel" aria-hidden="true">
+                <div class="clothes-ring" id="clothesRing">
+                    <div class="clothes-item" data-cat="hat">Hat</div>
+                    <div class="clothes-item" data-cat="shirt">Shirt</div>
+                    <div class="clothes-item" data-cat="pants">Pants</div>
+                    <div class="clothes-item" data-cat="soks">Soks</div>
+                    <div class="clothes-item" data-cat="shoes">Shoes</div>
+                </div>
+            </div>
+            <div class="clothes-selection__hint">Scroll to rotate · Selected: none</div>
+            <div class="clothes-gallery">
+                <div class="clothes-gallery__title">Items for Hat</div>
+                <div class="clothes-gallery__grid" aria-live="polite"></div>
+            </div>
+        </div>
+        <div class="body-image">
+            <img src="./img/body.png" alt="Hero Image">
+        </div>
+        <!-- Shop wheel (hidden until Shop Now clicked) -->
+        
+    </section>
+        <script src="./scripts/menu.js"></script>
+        <script src="./scripts/shop-toggle.js"></script>
+        <script src="./scripts/clothes-wheel.js"></script>
 </body>
-</html>

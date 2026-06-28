@@ -1,231 +1,481 @@
-@font-face {
-  font-family: deathnote;
-  src: url(../deathnote_font/DEATHNOTE_Font/DEATHNOTEFont.ttf);
-}
 * {
   margin: 0;
   padding: 0;
   border: 0;
-  text-decoration: none;
-  color: black;
+  box-sizing: border-box;
 }
 
-a {
-  color: whitesmoke;
-}
-
-a:hover {
-  text-decoration: underline;
-  text-decoration-color: #ac0202;
+html,
+body {
+  min-height: 100%;
 }
 
 body {
-  background-color: rgb(20, 3, 3);
-  /* Dropdown Button */
-  /* Dropdown button on hover & focus */
-  /* The container <div> - needed to position the dropdown content */
-  /* Dropdown Content (Hidden by Default) */
-  /* Links inside the dropdown */
-  /* Change color of dropdown links on hover */
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-}
-body header {
-  color: black;
-  width: 100vw;
-  height: 10vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 15vw;
-  align-items: center;
-  text-transform: uppercase;
-}
-body header #logo {
-  font-size: 2.5em;
-}
-body header #logo span img {
-  width: min;
-  height: 0.8em;
-}
-body header #logo::after {
-  color: #ac0202;
-  content: "studio";
-  width: 12px;
-  height: 12px;
-  font-size: 0.6em;
-  font-weight: lighter;
-  margin-left: 0.3em;
-}
-body header nav {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-body aside {
-  width: auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  /* The side navigation menu */
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-}
-body aside .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 10vh; /* Stay at the top */
-  background-color: rgba(0, 0, 0, 0.5); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-body aside .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-  color: whitesmoke;
-}
-body aside .sidenav:hover {
-  background-color: black;
-}
-body aside #main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-body .map-aside {
-  left: -5vw;
-  background-color: red;
-}
-body .map-aside .sidenav {
-  left: 0;
-}
-body .contact-aside {
-  right: 0;
-}
-body .contact-aside .sidenav {
-  right: 0;
-}
-body #divides {
-  margin: auto;
-  width: 90vw;
-  height: 0.2vh;
-  background-color: #ac0202;
-}
-body main {
-  display: flex;
-  flex-direction: row;
   width: 100%;
-  height: 80vh;
-}
-body main article {
-  display: flex;
-  flex-direction: row;
-  background-color: #ac0202;
-  width: 60vw;
-  height: 60vh;
-  margin: auto;
-}
-body main article img {
-  width: 50%;
-  height: 100%;
-}
-body main article div {
-  font-size: 2em;
-  margin: auto;
-}
-body main article div h1 {
-  display: flex;
-  flex-direction: row;
-  text-transform: uppercase;
-  word-spacing: 1px;
-  font-family: k2d;
-  color: whitesmoke;
-}
-body main article div h1 span {
-  text-transform: capitalize;
-  font-weight: lighter;
-}
-body main article div p:nth-of-type(1) {
-  opacity: 0.5;
-}
-body footer {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  z-index: 2;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 0.5em;
-  gap: 3em;
-  width: 100%;
-  height: 10vh;
-}
-body footer a {
-  margin-right: 8em;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-body footer a img {
-  height: 2.5vh;
-  filter: brightness(0) saturate(100%) invert(12%) sepia(81%) saturate(7462%) hue-rotate(9deg) brightness(69%) contrast(110%);
-  margin-right: 1.5em;
-}
-body footer a p {
-  color: whitesmoke;
-  font-size: 2.5em;
-  text-transform: uppercase;
-}
-body footer a p span {
-  color: whitesmoke;
-  font-weight: bolder;
-}
-body .dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-body .dropbtn:hover, body .dropbtn:focus {
-  background-color: #2980B9;
-}
-body .dropdown {
-  position: relative;
-  display: inline-block;
-}
-body .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-body .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-body .dropdown-content a:hover {
-  background-color: #ddd;
-}
-body .show {
-  display: block;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #2b2626;
+  color: #111;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 10;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+header nav .logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+header nav .logo-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+header nav .search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  flex: 1;
+  min-width: 18rem;
+  max-width: min(32rem, 100%);
+  width: min(100%, 32rem);
+  margin: 0 1rem;
+}
+header nav .nav-actions {
+  display: flex;
+  align-items: center;
+}
+header nav .menu-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.5rem;
+  padding: 0.2rem;
+  border: none;
+  background-color: #2b2626;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+header nav .menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #b12117;
+  border-radius: 999px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+header nav .menu-toggle.open span:nth-child(1) {
+  transform: translateY(0.55rem) rotate(45deg);
+}
+header nav .menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+header nav .menu-toggle.open span:nth-child(3) {
+  transform: translateY(-0.55rem) rotate(-45deg);
+}
+header nav .search-form input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #f4e8d8;
+  font-size: 0.95rem;
+  outline: none;
+  padding: 0.25rem 0;
+}
+header nav .search-form input::-moz-placeholder {
+  color: rgba(244, 232, 216, 0.68);
+}
+header nav .search-form input::placeholder {
+  color: rgba(244, 232, 216, 0.68);
+}
+header nav .search-form button {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #ff0000;
+  color: #f4e8d8;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+header nav .search-form button:hover {
+  background-color: rgb(214.2, 0, 0);
+}
+header .dropdown-menu {
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  left: auto;
+  width: 18rem;
+  z-index: 20;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(131, 118, 76);
+  border: 1px solid rgba(43, 38, 38, 0.12);
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.2);
+  transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+header .dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+header .dropdown-menu li a {
+  display: block;
+  color: #2b2626;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+header .dropdown-menu li a:hover,
+header .dropdown-menu li a:focus-visible {
+  background-color: rgba(43, 38, 38, 0.08);
+}
+header .dropdown-menu.open {
+  max-height: 240px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  padding: 1rem 2rem 1rem 4.5rem;
+  margin-top: 4rem;
+  background-color: #2b2626;
+}
+.main__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+.main__content .btn {
+  margin-top: 1rem;
+}
+.main__content h1 {
+  color: #ff0000;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.main__content h1 .brand-name {
+  color: #f4e8d8;
+}
+.main__content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 40rem;
+  margin-bottom: 1.75rem;
+  color: #e6dfd5;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-left: 1.5rem;
+}
+.main .btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  background-color: #303030;
+  color: #ff0000;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.main .btn:hover {
+  background-color: #111;
+  transform: translateY(-2px);
+}
+.main .body-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+.main .body-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+.clothes-selection {
+  display: none;
+  align-self: center;
+  width: min(100%, 620px);
+  min-width: 320px;
+  padding: 1.4rem 1.5rem;
+  background: rgba(43, 38, 38, 0.92);
+  border: 1px solid rgba(255, 0, 0, 0.16);
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+  position: relative;
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.clothes-selection .clothes-selection__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid rgba(244, 232, 216, 0.08);
+}
+.clothes-selection .clothes-selection__title {
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  color: #f4e8d8;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.clothes-selection .clothes-selection__subtitle {
+  color: rgba(244, 232, 216, 0.72);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 28rem;
+}
+.clothes-selection .clothes-wheel {
+  width: 100%;
+  min-height: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clothes-selection .clothes-ring {
+  position: absolute;
+  width: 92%;
+  height: 92%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255, 0, 0, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1), 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+.clothes-selection .clothes-ring::before {
+  content: "";
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  background: rgba(43, 38, 38, 0.98);
+  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.08);
+}
+.clothes-selection .clothes-ring::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.95);
+  box-shadow: 0 0 0 8px rgba(255, 0, 0, 0.15);
+}
+.clothes-selection .clothes-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f4e8d8;
+  font-weight: 800;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 220ms ease, background 220ms ease, color 220ms ease;
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 6px 18px rgba(0, 0, 0, 0.22);
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  line-height: 1.1;
+}
+.clothes-selection .clothes-item:hover {
+  transform: translate(-50%, -50%) scale(1.14);
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.32);
+}
+.clothes-selection .clothes-item.selected {
+  transform: translate(-50%, -50%) scale(1.16);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.38);
+  background: rgba(255, 0, 0, 0.95);
+  color: #f4e8d8;
+  border-color: rgba(255, 0, 0, 0.85);
+}
+.clothes-selection .clothes-gallery {
+  display: grid;
+  gap: 0.9rem;
+}
+.clothes-selection .clothes-gallery__title {
+  color: #f4e8d8;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.clothes-selection .clothes-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 0, 0, 0.7) transparent;
+}
+.clothes-selection .clothes-gallery__grid::-webkit-scrollbar {
+  width: 10px;
+}
+.clothes-selection .clothes-gallery__grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 0, 0.7);
+}
+.clothes-selection .clothes-gallery__grid::-webkit-scrollbar-button {
+  display: none;
+}
+.clothes-selection .clothes-gallery__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 0, 0, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), 0 8px 18px rgba(0, 0, 0, 0.18);
+  color: #f4e8d8;
+  min-height: 240px;
+}
+.clothes-selection .clothes-gallery__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+.clothes-selection .clothes-gallery__info strong {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+.clothes-selection .clothes-gallery__description {
+  color: rgba(244, 232, 216, 0.78);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 4rem;
+  max-height: 4rem;
+  overflow: hidden;
+}
+.clothes-selection .clothes-gallery__card span {
+  display: block;
+  color: rgba(244, 232, 216, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.clothes-selection .clothes-selection__hint {
+  text-align: center;
+  color: rgba(244, 232, 216, 0.92);
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .main {
+    flex-direction: column;
+    align-items: stretch;
+    height: calc(100vh - 4rem);
+    padding: 0.75rem 1rem 1rem;
   }
-  .sidenav a {
-    font-size: 18px;
+  .main__content,
+  .main .body-image {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 0.75rem;
+  }
+  .main .body-image:last-child {
+    margin-bottom: 0;
+  }
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .search-form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 640px) {
+  header {
+    height: auto;
+    padding: 0.75rem 0;
+  }
+  header nav {
+    flex-direction: row;
+    align-items: stretch;
+    text-align: center;
+  }
+  header nav a {
+    margin: 0.4rem 0;
+  }
+  /* On phone, hide the search bar and keep only the menu icon */
+  .search-form {
+    display: none !important;
+  }
+  .main {
+    padding-top: 5rem;
+  }
+  .main__content,
+  .main .body-image {
+    padding: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
